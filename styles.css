@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    gap: 10%;
+}
+
+.sidebar {
+    height: 90vh;
+    width: 20%;
+    background-color: #333;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.sidebar .sidebar-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding: 20px;
+    width: 100%;
+    color: white;
+}
+
+.sidebar-top .img-holder {
+    display: flex;
+    padding: 10px;
+
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+
+}
+
+.sidebar-top .img-holder img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+.sidebar-body {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 3px;
+
+}
+
+.sidebar-body li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.sidebar-body li .icon {
+    width: 100%;
+    height: 40px;
+    margin: 3px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar-body li .info {
+    padding: 3px;
+
+
+    width: 100%;
+}
+
+.sidebar-body li img {
+    width: 30px;
+    height: 30px;
+
+}
+
+.main {
+    height: 90vh;
+    width: 70%;
+    background-color: #333;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    overflow-y: auto;
+
+}
+
+
+.menu-btn {
+    display: none;
+}
+
+.who-im .joint-card {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.who-im .card {
+    width: 45%;
+    height: auto;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+
+}
+
+.who-im .card .part1 {
+    margin: 10px;
+    width: 30%;
+    height: 70px
+}
+
+.who-im .card .part1 img {
+    width: 100%;
+    height: 100%;
+
+}
+
+@media (max-width: 1050px) {
+    .sidebar {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        width: 60vw;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .container {
+
+        gap: 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+
+}
+
+
+
+@media (max-width: 760px) {
+    .who-im .card {
+        width: 100%;
+    }
+
+    .hover-card {
+        width: 100% !important;
+    }
+
+    .folio-all {
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .tab-content #nav-contact a {
+       
+        width: 100%;
+    }
+
+    .container {
+        padding: 10px !important;
+    }
+}
+
+/* PORTFOLIO */
+
+
+.hover-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hover-card img {
+    transition: transform 0.5s ease;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Black transparent */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.hover-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+.hover-card:hover img {
+    transform: scale(1.1);
+}
+
+/* MY CV */
+.personal-details h5 {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.personal-details .inner {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.personal-details .inner li {
+    list-style: none;
+}
+
+.personal-details .refree-inner ol li {
+    margin-bottom: 10px;
+
+}
+
+.personal-details .refree-inner ol li p {
+    padding: 0;
+    margin: 0;
+}
+
+.personal-details .inner .level li {
+    list-style: none;
+}
+
+.personal-details .inner .level p {
+    margin-left: 10px;
+}
+
+.personal-details .inner .content li {
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+}
+
+.personal-details .inner .content li span {
+
+    width: 150px;
+}
+
+.personal-details .profile-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+
+/* CONTACTS ####################################################################*/
+
+.tab-content #nav-contact {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+.tab-content #nav-contact a {
+    text-decoration: none;
+    color: white;
+    width: 49%;
+}
+
+.tab-content #nav-contact .card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+    padding: 10px;
+}
+
+
+
+
+.tab-content #nav-contact .card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+@media (max-width: 760px) {
+    .tab-content #nav-contact a {
+        width: 100%;
+    }
+
+}
